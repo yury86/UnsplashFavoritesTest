@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  UnsplashFavoritesTest
 //
-//  Created by Мак on 26.01.2022.
+//  Created by Мак on 23.01.2022.
 //
 
 import UIKit
@@ -17,6 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        window?.rootViewController = MainTabBarController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
