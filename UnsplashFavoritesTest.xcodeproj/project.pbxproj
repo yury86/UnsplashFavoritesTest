@@ -16,6 +16,11 @@
 		0480DB8C27A17906002B4B2F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480DB8B27A17906002B4B2F /* MainTabBarController.swift */; };
 		0480DB8E27A17934002B4B2F /* Photos in Resources */ = {isa = PBXBuildFile; fileRef = 0480DB8D27A17934002B4B2F /* Photos */; };
 		0480DB9027A179D7002B4B2F /* Service in Resources */ = {isa = PBXBuildFile; fileRef = 0480DB8F27A179D7002B4B2F /* Service */; };
+		0480DB9227A17C1A002B4B2F /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480DB9127A17C1A002B4B2F /* PhotosCollectionViewController.swift */; };
+		0480DB9427A17C23002B4B2F /* PhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480DB9327A17C23002B4B2F /* PhotosCell.swift */; };
+		0480DB9627A17C26002B4B2F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480DB9527A17C26002B4B2F /* NetworkService.swift */; };
+		0480DB9827A17C28002B4B2F /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480DB9727A17C28002B4B2F /* NetworkDataFetcher.swift */; };
+		0480DB9A27A17C2A002B4B2F /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480DB9927A17C2A002B4B2F /* SearchResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		0480DB8B27A17906002B4B2F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0480DB8D27A17934002B4B2F /* Photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Photos; sourceTree = "<group>"; };
 		0480DB8F27A179D7002B4B2F /* Service */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Service; sourceTree = "<group>"; };
+		0480DB9127A17C1A002B4B2F /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		0480DB9327A17C23002B4B2F /* PhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCell.swift; sourceTree = "<group>"; };
+		0480DB9527A17C26002B4B2F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0480DB9727A17C28002B4B2F /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		0480DB9927A17C2A002B4B2F /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,11 @@
 				0480DB7727A1785E002B4B2F /* SceneDelegate.swift */,
 				0480DB8F27A179D7002B4B2F /* Service */,
 				0480DB7927A1785E002B4B2F /* ViewController.swift */,
+				0480DB9927A17C2A002B4B2F /* SearchResults.swift */,
+				0480DB9727A17C28002B4B2F /* NetworkDataFetcher.swift */,
+				0480DB9527A17C26002B4B2F /* NetworkService.swift */,
+				0480DB9127A17C1A002B4B2F /* PhotosCollectionViewController.swift */,
+				0480DB9327A17C23002B4B2F /* PhotosCell.swift */,
 				0480DB8D27A17934002B4B2F /* Photos */,
 				0480DB8B27A17906002B4B2F /* MainTabBarController.swift */,
 				0480DB7B27A1785E002B4B2F /* Main.storyboard */,
@@ -150,10 +165,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0480DB9827A17C28002B4B2F /* NetworkDataFetcher.swift in Sources */,
 				0480DB7A27A1785E002B4B2F /* ViewController.swift in Sources */,
 				0480DB7627A1785E002B4B2F /* AppDelegate.swift in Sources */,
+				0480DB9427A17C23002B4B2F /* PhotosCell.swift in Sources */,
 				0480DB8C27A17906002B4B2F /* MainTabBarController.swift in Sources */,
+				0480DB9227A17C1A002B4B2F /* PhotosCollectionViewController.swift in Sources */,
 				0480DB7827A1785E002B4B2F /* SceneDelegate.swift in Sources */,
+				0480DB9A27A17C2A002B4B2F /* SearchResults.swift in Sources */,
+				0480DB9627A17C26002B4B2F /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
