@@ -17,7 +17,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     private var selectedImages = [UIImage]()
     
     private let itemsPerRow: CGFloat = 2
-    private let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    private let sectionInserts = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     private lazy var addBarButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped))
@@ -124,7 +124,41 @@ class PhotosCollectionViewController: UICollectionViewController {
         let cell = collectionView.cellForItem(at: indexPath) as! PhotosCell
         guard let image = cell.photoImageView.image else { return }
             selectedImages.append(image)
+       // podrobno
+        let newViewController = UIViewController()
+        //let width = cell.photoImageView.image!.size.width
+        //let height = cell.photoImageView.image!.size.height
+        let previewImageView: UIImageView = {
+           let imageView = UIImageView()
+           imageView.translatesAutoresizingMaskIntoConstraints = false
+           imageView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+           imageView.contentMode = .scaleAspectFit
         
+           return imageView
+       }()
+        
+        //let previewImageView: UIImageView = UIImageView(frame:CGRect(x: 0, y: 0, width: width, height: height))
+        previewImageView.image = cell.photoImageView.image
+        newViewController.view.addSubview(previewImageView)
+        let label1 = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 31))
+        //label1.center = CGPoint(x: 160, y: 285)
+        label1.textAlignment = . center
+        label1.text = "12345678"
+        label1.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        label1.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label1.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        //label1.al
+        newViewController.view.addSubview(label1)
+        //label1.centerXAnchor.constraint(equalTo: newViewController.view.centerXAnchor).isActive = true
+        //label1.centerYAnchor.constraint(equalTo: newViewController.view.centerYAnchor).isActive = true
+        previewImageView.topAnchor.constraint(equalTo: newViewController.view.topAnchor).isActive = true
+        previewImageView.bottomAnchor.constraint(equalTo: newViewController.view.bottomAnchor).isActive = true
+        previewImageView.trailingAnchor.constraint(equalTo: newViewController.view.trailingAnchor).isActive = true
+        previewImageView.leadingAnchor.constraint(equalTo: newViewController.view.leadingAnchor).isActive = true
+        label1.bottomAnchor.constraint(equalTo: newViewController.view.bottomAnchor).isActive = true
+        navigationController?.pushViewController(newViewController, animated: true)
+
+
     }
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

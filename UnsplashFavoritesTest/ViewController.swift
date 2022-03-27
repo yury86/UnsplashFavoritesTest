@@ -9,9 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var networkDataFetcher = NetworkDataFetcher()
+    private var photos = [UnsplashPhoto]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .green
+        view.backgroundColor = .green
     }
 }
 
